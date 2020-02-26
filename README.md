@@ -1,1 +1,2 @@
-{\rtf1}
+# Our project
+This is our project
