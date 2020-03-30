@@ -7,7 +7,7 @@
     grid-template-areas:
             "navbar navbar navbar navbar navbar navbar navbar"
             "search search search search search search search"
-            "sevendayforecast sevendayforecast sevendayforecast sevendayforecast sevendayforecast sevendayforecast sevendayforecast"
+            "monday tuesday wednesday thursday friday saturday sunday"
             "today today today today umbrella umbrella umbrella"
             "today today today today umbrella umbrella umbrella"
             "thisweek thisweek thisweek . thismonth thismonth thismonth"
@@ -16,61 +16,99 @@
 
 .navbar {
     grid-area: navbar;
-/*     grid-column: 1/8; */
+    /*     grid-column: 1/8; */
     background-color: rgba(60, 0, 255, 0.205);
     text-align: center; }
 
 .search {
     grid-area: search;
-/*     grid-column: 1/8; */
+    /*     grid-column: 1/8; */
     background-color: rgba(255, 0, 191, 0.205);
     text-align: center; }
 
-.sevendayforecast {
-    grid-area: sevendayforecast;
-/*     grid-column: 1/8; */
-    background-color: rgba(0, 174, 255, 0.205);
+.monday {
+    grid-area: monday;
+    background-color: #1ACAD8;
     text-align: center;
+    border-radius: 50%;
 }
+.tuesday {
+    grid-area: tuesday;
+    background-color: #1ACAD8;
+    text-align: center;
+    border-radius: 50%;
+}
+.wednesday {
+    grid-area: wednesday;
+    background-color: #1ACAD8;
+    text-align: center;
+    border-radius: 50%;
+}
+.thursday {
+    grid-area: thursday;
+    background-color: #1ACAD8;
+    text-align: center;
+    border-radius: 50%;
+}
+.friday {
+    grid-area: friday;
+    background-color: #1ACAD8;
+    text-align: center;
+    border-radius: 50%;
+}
+.saturday {
+    grid-area: saturday;
+    background-color: #1ACAD8;
+    text-align: center;
+    border-radius: 50%;
+}
+.sunday {
+    grid-area: sunday;
+    background-color: #1ACAD8;
+    text-align: center;
+    border-radius: 50%;
+}
+
+
 
 .today {
     grid-area: today;
-/*     grid-column: 1/5; */
+    /*     grid-column: 1/5; */
     background-color: rgba(0, 255, 179, 0.205);
     text-align: center;
 }
 
 .umbrella {
     grid-area: umbrella;
-/*     grid-column: 5/8; */
+    /*     grid-column: 5/8; */
     background-color: rgba(251, 255, 0, 0.205);
     text-align: center;
 }
 
 .thisweek {
     grid-area: thisweek;
-/*     grid-column: 1/4; */
+    /*     grid-column: 1/4; */
     background-color: rgba(255, 8, 0, 0.205);
     text-align: center;
 }
 
 .thismonth {
     grid-area: thismonth;
-/*     grid-column: 5/8; */
+    /*     grid-column: 5/8; */
     background-color: rgba(0, 26, 255, 0.205);
     text-align: center;
 }
 
 .createreminder {
     grid-area: createreminder;
-/*     grid-column: 1/4; */
+    /*     grid-column: 1/4; */
     background-color: rgba(255, 0, 85, 0.205);
     text-align: center;
 }
 
 .add-reminder {
     grid-area: add-reminder;
-/*     grid-column: 5/8; */
+    /*     grid-column: 5/8; */
     background-color: rgba(0, 217, 255, 0.205);
     text-align: center;
 }
