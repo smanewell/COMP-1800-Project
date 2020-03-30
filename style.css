@@ -2,7 +2,7 @@
     display: grid;
     width: 100%;
     height: 95vh;
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-rows: 0.75fr 0.5fr 0.75fr 1fr 1.25fr 1fr 1fr;
     grid-gap: 1vh;
     grid-template-areas:
             "navbar navbar navbar navbar navbar navbar navbar"
@@ -20,6 +20,9 @@
     background-color: rgba(60, 0, 255, 0.205);
     text-align: center;
     border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .search {
@@ -28,6 +31,12 @@
     background-color: rgba(255, 0, 191, 0.205);
     text-align: center;
     border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.input {
+    width:40vw;
 }
 
 .monday {
@@ -73,12 +82,17 @@
     border-radius: 50%;
 }
 
+
+
 .today {
     grid-area: today;
     /*     grid-column: 1/5; */
     background-color: rgba(0, 255, 179, 0.205);
     text-align: center;
     border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .umbrella {
@@ -87,6 +101,9 @@
     background-color: rgba(251, 255, 0, 0.205);
     text-align: center;
     border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .thisweek {
@@ -95,6 +112,9 @@
     background-color: rgba(255, 8, 0, 0.205);
     text-align: center;
     border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .thismonth {
@@ -103,6 +123,9 @@
     background-color: rgba(0, 26, 255, 0.205);
     text-align: center;
     border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .createreminder {
@@ -111,6 +134,9 @@
     background-color: rgba(255, 0, 85, 0.205);
     text-align: center;
     border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .add-reminder {
@@ -119,4 +145,7 @@
     background-color: rgba(0, 217, 255, 0.205);
     text-align: center;
     border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
