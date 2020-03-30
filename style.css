@@ -7,7 +7,7 @@
     grid-template-areas:
             "navbar navbar navbar navbar navbar navbar navbar"
             "search search search search search search search"
-            "monday tuesday wednesday thursday friday saturday sunday"
+            "mon tues wed thurs fri sat sun"
             "today today today today umbrella umbrella umbrella"
             "today today today today umbrella umbrella umbrella"
             "thisweek thisweek thisweek . thismonth thismonth thismonth"
@@ -39,50 +39,47 @@
     width:40vw;
 }
 
-.monday {
-    grid-area: monday;
-    background-color: #1ACAD8;
-    text-align: center;
-    border-radius: 50%;
-}
-.tuesday {
-    grid-area: tuesday;
-    background-color: #1ACAD8;
-    text-align: center;
-    border-radius: 50%;
-}
-.wednesday {
-    grid-area: wednesday;
-    background-color: #1ACAD8;
-    text-align: center;
-    border-radius: 50%;
-}
-.thursday {
-    grid-area: thursday;
-    background-color: #1ACAD8;
-    text-align: center;
-    border-radius: 50%;
-}
-.friday {
-    grid-area: friday;
-    background-color: #1ACAD8;
-    text-align: center;
-    border-radius: 50%;
-}
-.saturday {
-    grid-area: saturday;
-    background-color: #1ACAD8;
-    text-align: center;
-    border-radius: 50%;
-}
-.sunday {
-    grid-area: sunday;
-    background-color: #1ACAD8;
-    text-align: center;
-    border-radius: 50%;
-}
+.mon {
+    grid-area: mon;
 
 
+}
+.tues {
+    grid-area: tues;
+
+
+}
+.wed {
+    grid-area: wed;
+
+
+}
+.thurs {
+    grid-area: thurs;
+
+
+}
+.fri {
+    grid-area: fri;
+
+
+}
+.sat {
+    grid-area: sat;
+
+
+}
+.sun {
+    grid-area: sun;
+
+
+}
+
+.day {
+    background-color: #1ACAD8;
+    text-align: center;
+    border-radius: 50%;
+}
 
 .today {
     grid-area: today;
