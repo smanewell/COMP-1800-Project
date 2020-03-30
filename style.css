@@ -1,0 +1,67 @@
+.grid-container {
+    display: grid;
+    width: 100%;
+    height: 95vh;
+    grid-template-rows: repeat(7, 1fr);
+    grid-gap: 1vh;
+    grid-template-areas: 
+            "navbar navbar navbar navbar navbar navbar navbar" 
+            "search search search search search search search"
+            "sevendayforecast sevendayforecast sevendayforecast sevendayforecast sevendayforecast sevendayforecast sevendayforecast"
+            "today today today today umbrella umbrella umbrella"
+            "today today today today umbrella umbrella umbrella"
+            "thisweek thisweek thisweek . thismonth thismonth thismonth" 
+            "createreminder createreminder createreminder . add-reminder add-reminder add-reminder";
+}
+
+.navbar { 
+    grid-area: navbar;
+    background-color: rgba(60, 0, 255, 0.205);
+    text-align: center; }
+
+.search { 
+    grid-area: search;
+    background-color: rgba(255, 0, 191, 0.205);
+    text-align: center; }
+
+.sevendayforecast { 
+    grid-area: sevendayforecast;
+    background-color: rgba(0, 174, 255, 0.205);
+    text-align: center;
+ }
+
+.today { 
+    grid-area: today;
+    background-color: rgba(0, 255, 179, 0.205);
+    text-align: center;
+ }
+
+.umbrella { 
+    grid-area: umbrella;
+    background-color: rgba(251, 255, 0, 0.205);
+    text-align: center;
+ }
+
+.thisweek { 
+    grid-area: thisweek;
+    background-color: rgba(255, 8, 0, 0.205);
+    text-align: center;
+ }
+
+.thismonth { 
+    grid-area: thismonth;
+    background-color: rgba(0, 26, 255, 0.205);
+    text-align: center;
+ }
+
+.createreminder { 
+    grid-area: createreminder;
+    background-color: rgba(255, 0, 85, 0.205);
+    text-align: center;
+ }
+
+.add-reminder { 
+    grid-area: add-reminder;
+    background-color: rgba(0, 217, 255, 0.205);
+    text-align: center;
+ }
