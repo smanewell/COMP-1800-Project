@@ -18,13 +18,17 @@
     grid-area: navbar;
     /*     grid-column: 1/8; */
     background-color: rgba(60, 0, 255, 0.205);
-    text-align: center; }
+    text-align: center;
+    border-radius: 6px;
+}
 
 .search {
     grid-area: search;
     /*     grid-column: 1/8; */
     background-color: rgba(255, 0, 191, 0.205);
-    text-align: center; }
+    text-align: center;
+    border-radius: 6px;
+}
 
 .monday {
     grid-area: monday;
@@ -69,13 +73,12 @@
     border-radius: 50%;
 }
 
-
-
 .today {
     grid-area: today;
     /*     grid-column: 1/5; */
     background-color: rgba(0, 255, 179, 0.205);
     text-align: center;
+    border-radius: 6px;
 }
 
 .umbrella {
@@ -83,6 +86,7 @@
     /*     grid-column: 5/8; */
     background-color: rgba(251, 255, 0, 0.205);
     text-align: center;
+    border-radius: 6px;
 }
 
 .thisweek {
@@ -90,6 +94,7 @@
     /*     grid-column: 1/4; */
     background-color: rgba(255, 8, 0, 0.205);
     text-align: center;
+    border-radius: 6px;
 }
 
 .thismonth {
@@ -97,6 +102,7 @@
     /*     grid-column: 5/8; */
     background-color: rgba(0, 26, 255, 0.205);
     text-align: center;
+    border-radius: 6px;
 }
 
 .createreminder {
@@ -104,6 +110,7 @@
     /*     grid-column: 1/4; */
     background-color: rgba(255, 0, 85, 0.205);
     text-align: center;
+    border-radius: 6px;
 }
 
 .add-reminder {
@@ -111,4 +118,5 @@
     /*     grid-column: 5/8; */
     background-color: rgba(0, 217, 255, 0.205);
     text-align: center;
+    border-radius: 6px;
 }
