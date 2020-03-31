@@ -1,0 +1,96 @@
+.header {
+    text-align: center; 
+    background-color: dodgerblue;
+    padding: 5px ;
+    margin: 5px ;
+}
+.header h1,h4, p {
+    color: white;
+}
+
+.btn-circle.btn-sm { 
+    width: 30px; 
+    height: 30px; 
+    padding: 5px; 
+    border-radius: 15px; 
+    font-size: 8px; 
+    text-align: center; 
+}
+.forecast {
+    text-align: center; 
+    background-color: lightskyblue;
+    padding: 5px;
+    margin: 5px;
+}
+.forecast h5 {
+    color: white;
+}
+.weather-icon {
+    font-size: 12px;
+    color: gray;
+}
+
+.weekday {
+    color: white;
+} 
+
+.today {
+    display:flex; 
+    align-items: center; 
+    text-align: center;
+    margin: 5px;
+    
+}
+
+.today-reminders {
+    margin: 5px; 
+    padding: 5px; 
+    background-color:dodgerblue; 
+    border-radius: 10px; 
+    color: white;
+}
+
+.today-reminders-info {
+    display: flex; 
+    align-items: center;
+}
+
+.next-reminder {
+    width: 70%;
+}
+
+.next-reminder-info {
+    margin: 5px; 
+    padding: 5px; 
+    border-radius: 10px; 
+    background-color:lightskyblue;
+}
+
+.future-reminders {
+    display:flex; 
+    align-items: center; 
+    text-align: center;
+    margin: 5px; 
+
+}
+
+.week-reminders {
+    margin: 5px; 
+    padding: 5px; 
+    border-radius: 10px; 
+    background-color:lightskyblue;
+}
+.month-reminders {
+    margin: 5px; 
+    padding: 5px; 
+    border-radius: 10px; 
+    background-color:lightskyblue;
+}
+
+.create-view {
+    display:flex; 
+    align-items: center; 
+    text-align: center;
+    margin: 5px;
+    padding: 5px; 
+}
