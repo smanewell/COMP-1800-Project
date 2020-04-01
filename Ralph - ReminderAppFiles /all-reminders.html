@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <div class="header">
+            <div>
+                <h1>iForgot</h1>
+                <p style="margin: 5px; padding: 5px;">We Remember</p>
+            </div>
+            <!-- search -->
+            <div style="text-align: center; align-items: center;">
+                <div>
+                    <input type="text" placeholder="Search" name="search"
+                        style="border-radius:6px; padding:5px; width: 60%; max-width: 350px;">
+
+                    <button type="button" class="btn btn-circle btn-sm" style="background-color:mediumaquamarine;"><i
+                            class="fa fa-search fa-2x" style="color: white;"></i>
+                </div>
+            </div>
+        </div>
+        <!-- todays reminders -->
+        <div class="content">
+            <ul class="list-group">
+                <% reminders.forEach(function (reminderItem) { %>
+                <li class="list-group-item">
+                    <strong><%= reminderItem.title %>: </strong>
+                    <span class="pull-right"><%= reminderItem.time %>:</span>
+                </li>
+                <% }) %>
+            </ul>
+        </div>
+
+        <!-- creat / view -->
+        <div class="footer create-view" style="bottom:0; position: fixed;background-color: dodgerblue; ;">
+            <!-- create reminder -->
+            <div style="display: block;width: 50%; font-size: small;">
+                <h5 style="color: white;">Create Reminder</h5>
+                <i class="fa fa-plus-circle fa-4x" style="color: white;"></i>
+            </div>
+            <!-- view all reminders -->
+            <div style="display: block; width: 50%; font-size: small;">
+                <h5 style="color: white;">View All Reminders</h5>
+                <div class="fa-stack fa-2x">
+                    <i class="fa fa-circle fa-stack-2x" style="color: white;"></i>
+                    <i class="fas fa-eye fa-stack-1x" style="color: dodgerblue; font-size: larger;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
