@@ -76,3 +76,16 @@ function newElement() {
   }
 }
 
+function edit() {
+  document.getElementById("reminderSched").readOnly = false;
+  document.getElementById("reminderTitle").readOnly = false;
+  document.getElementById("myUL").readOnly = false;
+  document.getElementById("addTask").hidden = false;
+  let icon = document.getElementById("icon");
+  document.getElementById("test").remove();
+  let newCheck = document.createElement("i");
+  newCheck.className = "fa fa-check-circle fa-4x";
+  newCheck.style.color = "white";
+  icon.appendChild(newCheck);
+  icon.onclick = "none";
+}

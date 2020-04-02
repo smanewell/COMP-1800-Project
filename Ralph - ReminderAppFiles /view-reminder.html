@@ -51,7 +51,7 @@
                         <div class='input-group date' id='datetimepicker1'>
                             <!-- display the reminders date and time -->
                 
-                            <input type='text' class="form-control" value="<% reminderItem.datetime %>"> 
+                            <input id="reminderSched" type='text' class="form-control" value="<% reminderItem.datetime %>" readonly> 
                             <span class="input-group-addon" style="font-size: 11px;">
                                 <i class="glyphicon glyphicon-calendar"></i>
                             </span>
@@ -60,14 +60,14 @@
                     <div class="form-group">
                         <h4 class="reminder-heading">Reminder</h4>
                         <!-- desplay the reimnders title -->
-                        <input type="text" class="form-control" value="<%= reminderItem.title %>" name="reminder"
-                            style="margin-top: 25px;margin-bottom: 25px;font-size: large;padding: 20px;border-radius: 15px;">
+                        <input id ="reminderTitle" type="text" class="form-control" value="<%= reminderItem.title %>" name="reminder"
+                            style="margin-top: 25px;margin-bottom: 25px;font-size: large;padding: 20px;border-radius: 15px;" readonly>
                     </div>
                     <div class="form-group">
                         <h4 class="reminder-heading">Tasks</h4>
-                        <ul id="myUL" class="ul2">
+                        <ul id="myUL" class="ul2" readonly>
                             <!-- create new tasks -->
-                            <div>
+                            <div hidden="false" id="addTask">
                                 <span onclick="newElement()" class="btn btn-default" style="border: none;"><i
                                         class="fa fa-plus fa-1x" style="color: slategray;"></i></span>
                                 <input type="text" id="myInput" placeholder="new subtask"
@@ -86,14 +86,17 @@
         <div class="create-view" style="background-color: dodgerblue; ;">
             <!-- create reminder -->
             <div style="display: block;width: 50%; font-size: small;">
-                <button type="submit" for="new reminder" class="btn"
+                <button id="icon" type="submit" class="btn" onclick="edit()"
                     style="color: none; background-color: dodgerblue; border: none;">
-                    <i class="fa fa-check-circle fa-4x" style="color: white;"></i>
+                    <div id="test" class="fa-stack fa-2x">
+                        <i class="fa fa-circle fa-stack-2x" style="color: white;"></i>
+                        <i class="fas fa-pen fa-stack-1x" style="color: dodgerblue; font-size: larger;"></i>
+                    </div>
                 </button>
             </div>
             <!-- view all reminders -->
             <div style="display: block; width: 50%; font-size: small;">
-                <button type="submit" for="new reminder" class="btn"
+                <button type="submit" class="btn"
                     style="color: none; background-color: dodgerblue; border: none;">
                     <div class="fa-stack fa-2x">
                         <i class="fa fa-circle fa-stack-2x" style="color: white;"></i>
