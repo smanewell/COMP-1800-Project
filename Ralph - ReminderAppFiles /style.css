@@ -171,9 +171,7 @@ p {
     outline: none;
   }
 
-  * {
-    box-sizing: border-box;
-  }
+
   ul li:nth-child(odd) {
     background: #f9f9f9;
   }

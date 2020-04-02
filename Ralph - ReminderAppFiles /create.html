@@ -10,6 +10,16 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+
 </head>
 
 <body>
@@ -34,38 +44,44 @@
         <!-- todays reminders -->
         <div>
             <form action="/reminder" method="POST" id="new reminder">
-                <div class="form-group">
+                <div class="form-group" id="date">
                     <h4 class="reminder-heading">Date & Time</h4>
-  
-                </div>
-                <div class="form-group">
-                    <h4 class="reminder-heading">Reminder</h4>
-                    <input type="text" class="form-control" id="titleInput" placeholder="Reminder" name="reminder">
-                </div>
-                <div class="form-group">
-                    <h4 class="reminder-heading">Tasks</h4>
-                    <ul id="myUL">
-                        <div>
-                            <span onclick="newElement()" class="btn btn-default" style="border: none;"><i
-                                class="fa fa-plus fa-1x" style="color: slategray;"></i></span>
-                            <input type="text" id="myInput" placeholder="new subtask"
-                                style="border:none;  border-radius: 10px; width: 80%;">
+                        <div class="form-group" style="width:250px;">
+                            <div class='input-group date' id='datetimepicker1'>
+                                <input type='text' class="form-control">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                </span>
+                            </div>
                         </div>
-                    </ul>
-                </div>
+                    <div class="form-group">
+                        <h4 class="reminder-heading">Reminder</h4>
+                        <input type="text" class="form-control" placeholder="Reminder" name="reminder" style="margin-top: 25px;margin-bottom: 25px;font-size: large;padding: 20px;border-radius: 15px;">
+                    </div>
+                    <div class="form-group">
+                        <h4 class="reminder-heading">Tasks</h4>
+                        <ul id="myUL">
+                            <div>
+                                <span onclick="newElement()" class="btn btn-default" style="border: none;"><i
+                                        class="fa fa-plus fa-1x" style="color: slategray;"></i></span>
+                                <input type="text" id="myInput" placeholder="new subtask"
+                                    style="border:none;  border-radius: 10px; width: 80%;">
+                            </div>
+                        </ul>
+                    </div>
             </form>
         </div>
 
-    <!-- creat / view -->
+        <!-- creat / view -->
         <div class="create-view" style="background-color: dodgerblue; ;">
-        <!-- create reminder -->
+            <!-- create reminder -->
             <div style="display: block;width: 50%; font-size: small;">
                 <button type="submit" for="new reminder" class="btn"
                     style="color: none; background-color: dodgerblue; border: none;">
                     <i class="fa fa-check-circle fa-4x" style="color: white;"></i>
                 </button>
             </div>
-        <!-- view all reminders -->
+            <!-- view all reminders -->
             <div style="display: block; width: 50%; font-size: small;">
                 <button type="submit" for="new reminder" class="btn"
                     style="color: none; background-color: dodgerblue; border: none;">
@@ -81,9 +97,9 @@
 
     <script>
         $(function () {
-          $('#datetimepicker1').datetimepicker();
-       });
-      </script>
+            $('#datetimepicker1').datetimepicker();
+        });
+    </script>
 
 
     <script src="app.js"></script>

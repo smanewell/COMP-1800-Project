@@ -77,8 +77,3 @@ function newElement() {
   }
 }
 
-function time() {
-    $('#datetimepicker3').datetimepicker({
-        format: 'LT'
-    });
-}
