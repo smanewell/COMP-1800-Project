@@ -172,14 +172,14 @@ p {
   }
 
 
-  ul li:nth-child(odd) {
+#myUL li:nth-child(odd) {
     background: #f9f9f9;
   }
 
-  ul li:hover {
+#myUL li:hover {
     background: #ddd;
   }
-  ul li {
+#myUL li {
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 40px;
@@ -194,12 +194,12 @@ p {
     -ms-user-select: none;
     user-select: none;
   }
-  ul li.checked {
+.ul2 li.checked {
     background-color: mediumaquamarine;
     color: white;
     text-decoration: line-through;
   }
-  ul li.checked::before {
+.ul2 li.checked::before {
     content: '';
     position: absolute;
     border-color: white;
@@ -232,4 +232,3 @@ p {
     border-radius: 10px;
 
   }
-

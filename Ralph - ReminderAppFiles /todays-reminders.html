@@ -33,9 +33,10 @@
         </div>
         <!-- todays reminders -->
         <div class="todays-reminders">
+            <% forEach
             <ul class="list-group">
                 <% reminders.forEach(function (reminderItem) { %>
-                <li class="list-group-item">
+                <li class="list-group-item" >
                     <strong><%= reminderItem.title %>: </strong><span class="pull-right"><%= reminderItem.time %>:</span>
                 </li>
                 <% }) %>
