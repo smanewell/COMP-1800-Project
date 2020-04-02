@@ -32,19 +32,18 @@
             </div>
         </div>
         <!-- todays reminders -->
-        <div class="content">
+        <div class="todays-reminders">
             <ul class="list-group">
                 <% reminders.forEach(function (reminderItem) { %>
                 <li class="list-group-item">
-                    <strong><%= reminderItem.title %>: </strong>
-                    <span class="pull-right"><%= reminderItem.time %>:</span>
+                    <strong><%= reminderItem.title %>: </strong><span class="pull-right"><%= reminderItem.time %>:</span>
                 </li>
                 <% }) %>
             </ul>
         </div>
 
         <!-- creat / view -->
-        <div class="footer create-view" style="bottom:0; position: fixed;background-color: dodgerblue; ;">
+        <div class="create-view" style="background-color: dodgerblue; ;">
             <!-- create reminder -->
             <div style="display: block;width: 50%; font-size: small;">
                 <h5 style="color: white;">Create Reminder</h5>
