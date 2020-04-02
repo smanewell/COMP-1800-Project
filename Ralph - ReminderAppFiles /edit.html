@@ -46,38 +46,54 @@
             <form action="/reminder" method="POST" id="new reminder">
                 <div class="form-group" id="date">
                     <h4 class="reminder-heading">Date & Time</h4>
-                    <h4 class="form-control"><% reminderItem.datetime %> </h4>
-                </div>
-                <div class="form-group">
-                    <h4 class="reminder-heading">Reminder</h4>
-                    <!-- desplay the reimnders title -->
-                    <h4 class="form-control"><% reminderItem.title %></h4>
-                </div>
-                <div class="form-group">
-                    <h4 class="reminder-heading">Tasks</h4>
-                    <ul id="myUL" class="ul2">
-                        <!-- list of already created tasks go here -->
-                        <% reminderItem.tasks %>
-                    </ul>
-                </div>
+
+                    <div class="form-group" style="width:250px;">
+                        <div class='input-group date' id='datetimepicker1'>
+                            <!-- display the reminders date and time -->
+                
+                            <input type='text' class="form-control" value="<% reminderItem.datetime %>"> 
+                            <span class="input-group-addon" style="font-size: 11px;">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h4 class="reminder-heading">Reminder</h4>
+                        <!-- desplay the reimnders title -->
+                        <input type="text" class="form-control" value="<%= reminderItem.title %>" name="reminder"
+                            style="margin-top: 25px;margin-bottom: 25px;font-size: large;padding: 20px;border-radius: 15px;" >
+                    </div>
+                    <div class="form-group">
+                        <h4 class="reminder-heading">Tasks</h4>
+                        <ul id="myUL" class="ul2">
+                            <!-- create new tasks -->
+                            <div>
+                                <span onclick="newElement()" class="btn btn-default" style="border: none;"><i
+                                        class="fa fa-plus fa-1x" style="color: slategray;"></i></span>
+                                <input type="text" id="myInput" placeholder="new subtask"
+                                    style="border:none;  border-radius: 10px; width: 80%;">
+                            </div>
+                            <div>
+                                <!-- list of already created tasks go here -->
+                                <% reminderItem.tasks %>
+                            </div>
+                        </ul>
+                    </div>
             </form>
         </div>
-
-        <!-- creat / view -->
+        
+        <!-- edit / view -->
         <div class="create-view" style="background-color: dodgerblue; ;">
-            <!-- create reminder -->
+            <!-- save changes -->
             <div style="display: block;width: 50%; font-size: small;">
                 <button type="submit" for="new reminder" class="btn"
                     style="color: none; background-color: dodgerblue; border: none;">
-                    <div class="fa-stack fa-2x">
-                        <i class="fa fa-circle fa-stack-2x" style="color: white;"></i>
-                        <i class="fas fa-pen fa-stack-1x" style="color: dodgerblue; font-size: larger;"></i>
-                    </div>
+                    <i class="fa fa-check-circle fa-4x" style="color: white;"></i>
                 </button>
             </div>
             <!-- view all reminders -->
             <div style="display: block; width: 50%; font-size: small;">
-                <button type="submit" for="new reminder" class="btn"
+                <button type="submit" class="btn"
                     style="color: none; background-color: dodgerblue; border: none;">
                     <div class="fa-stack fa-2x">
                         <i class="fa fa-circle fa-stack-2x" style="color: white;"></i>
@@ -85,6 +101,7 @@
                     </div>
                 </button>
             </div>
+        </div>
         </div>
     </div>
 
@@ -102,3 +119,4 @@
 </body>
 
 </html>
+
