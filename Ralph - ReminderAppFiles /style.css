@@ -194,12 +194,12 @@ p {
     -ms-user-select: none;
     user-select: none;
   }
-.ul2 li.checked {
+  #myUL.ul2 li.checked {
     background-color: mediumaquamarine;
     color: white;
     text-decoration: line-through;
   }
-.ul2 li.checked::before {
+  #myUL.ul2 li.checked::before {
     content: '';
     position: absolute;
     border-color: white;
