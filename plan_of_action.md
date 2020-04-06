@@ -1,9 +1,9 @@
 Team Members:
 
 Name:               Student ID:     Role:
-Simon Newell        A01196438       -
+Simon Newell        A01196438       - Prototype Design and DarkSky API Research
 Ralph Kilian        A01202431       -
-Trevor Hobenshield  A00933315       -
+Trevor Hobenshield  A00933315       - Landing Page implementation
 Ted Yuan            A01027086       -
 Eric Dong           A01170099       -
 

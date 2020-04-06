@@ -1,0 +1,156 @@
+
+.grid-container {
+    display: grid;
+    width: 100%;
+    height: 95vh;
+    grid-template-rows: 0.75fr 0.5fr 0.5fr 1fr 1.25fr 1fr 1fr;
+    grid-gap: 1vh;
+    grid-template-areas:
+            "navbar navbar navbar navbar navbar navbar navbar"
+            "search search search search search search search"
+            "mon tues wed thurs fri sat sun"
+            "today today today today umbrella umbrella umbrella"
+            "today today today today umbrella umbrella umbrella"
+            "thisweek thisweek thisweek . thismonth thismonth thismonth"
+            "createreminder createreminder createreminder . add-reminder add-reminder add-reminder";
+}
+
+.navbar {
+    grid-area: navbar;
+    /*     grid-column: 1/8; */
+    text-align: center;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-style: solid;
+    border-color: rgba(0, 26, 255, 0.205);
+    
+}
+
+.search {
+    grid-area: search;
+    /*     grid-column: 1/8; */
+    text-align: center;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-style: solid;
+    border-color: rgba(0, 26, 255, 0.205);
+    
+}
+
+.input {
+    width:40vw;
+}
+
+.mon {
+    grid-area: mon;
+}
+
+.tues {
+    grid-area: tues;
+}
+
+.wed {
+    grid-area: wed;
+
+}
+.thurs {
+    grid-area: thurs;
+}
+
+.fri {
+    grid-area: fri;
+}
+
+.sat {
+    grid-area: sat;
+}
+
+.sun {
+    grid-area: sun;
+}
+
+.day{
+    border-radius: 12px;
+    padding: 2vh;
+}
+
+.today {
+    grid-area: today;
+    /*     grid-column: 1/5; */
+    text-align: center;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-style: solid;
+    border-color: rgba(0, 26, 255, 0.205);
+
+}
+
+.umbrella {
+    grid-area: umbrella;
+    /*     grid-column: 5/8; */
+    text-align: center;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-style: solid;
+    border-color: rgba(0, 26, 255, 0.205);
+}
+
+.thisweek {
+    grid-area: thisweek;
+    /*     grid-column: 1/4; */
+    text-align: center;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-style: solid;
+    border-color: rgba(0, 26, 255, 0.205);
+    
+}
+
+.thismonth {
+    grid-area: thismonth;
+    /*     grid-column: 5/8; */
+    text-align: center;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-style: solid;
+    border-color: rgba(0, 26, 255, 0.205);
+    
+}
+
+.createreminder {
+    grid-area: createreminder;
+    /*     grid-column: 1/4; */
+    text-align: center;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-style: solid;
+    border-color: rgba(0, 26, 255, 0.205);
+    
+}
+
+.add-reminder {
+    grid-area: add-reminder;
+    /*     grid-column: 5/8; */
+    text-align: center;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-style: solid;
+    border-color: rgba(0, 26, 255, 0.205);
+    
+}
