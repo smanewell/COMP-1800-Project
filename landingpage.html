@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
-<body style="background-color: lightblue;">
+<body style="background-color: lightblue;" onload="displayWeeklyForecast('forecastDisplay')">
     <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
 
-        <img src="images/iForgotLogo.png" width="30" height="30" class="d-inline-block align-top navbar navbar-dark bg-primary">
+        <img src="images/iForgotLogo.png" width="30" height="30" class="d-inline-block align-top navbar navbar-dark">
 
         <a class="navbar-brand" href="#">iForgot</a>
         
@@ -51,6 +51,10 @@
         </div>
       </div>
 
+      <div class="container-fluid">
+        <div id="forecastDisplay"></div>
+      </div>
+
       <div class="container"></div>
         <div class="row justify-content-center">
           <button type="button" class="btn btn-primary btn-lg" style="margin: 1vw;">Sign-In</button>
@@ -61,10 +65,7 @@
       <div class="fixed-bottom">
         <p class="text-info">Legal Mumbo Jumbo, Assorted Jargon, and something written in latin. copyright 2020</p>
       </div>
-      
-
-
-    
 </body>
+<script src="forecaster.js"></script>
 
 </html>
