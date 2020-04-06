@@ -18,23 +18,27 @@
 .navbar {
     grid-area: navbar;
     /*     grid-column: 1/8; */
-    background-color: rgba(60, 0, 255, 0.205);
     text-align: center;
     border-radius: 6px;
     justify-content: center;
     align-items: center;
     display: flex;
+    border-style: solid;
+    border-color: rgba(0, 26, 255, 0.205);
+    
 }
 
 .search {
     grid-area: search;
     /*     grid-column: 1/8; */
-    background-color: rgba(255, 0, 191, 0.205);
     text-align: center;
     border-radius: 6px;
     justify-content: center;
     align-items: center;
     display: flex;
+    border-style: solid;
+    border-color: rgba(0, 26, 255, 0.205);
+    
 }
 
 .input {
@@ -77,65 +81,76 @@
 .today {
     grid-area: today;
     /*     grid-column: 1/5; */
-    background-color: rgba(0, 255, 179, 0.205);
     text-align: center;
     border-radius: 6px;
     justify-content: center;
     align-items: center;
     display: flex;
+    border-style: solid;
+    border-color: rgba(0, 26, 255, 0.205);
+
 }
 
 .umbrella {
     grid-area: umbrella;
     /*     grid-column: 5/8; */
-    background-color: rgba(251, 255, 0, 0.205);
     text-align: center;
     border-radius: 6px;
     justify-content: center;
     align-items: center;
     display: flex;
+    border-style: solid;
+    border-color: rgba(0, 26, 255, 0.205);
 }
 
 .thisweek {
     grid-area: thisweek;
     /*     grid-column: 1/4; */
-    background-color: rgba(255, 8, 0, 0.205);
     text-align: center;
     border-radius: 6px;
     justify-content: center;
     align-items: center;
     display: flex;
+    border-style: solid;
+    border-color: rgba(0, 26, 255, 0.205);
+    
 }
 
 .thismonth {
     grid-area: thismonth;
     /*     grid-column: 5/8; */
-    background-color: rgba(0, 26, 255, 0.205);
     text-align: center;
     border-radius: 6px;
     justify-content: center;
     align-items: center;
     display: flex;
+    border-style: solid;
+    border-color: rgba(0, 26, 255, 0.205);
+    
 }
 
 .createreminder {
     grid-area: createreminder;
     /*     grid-column: 1/4; */
-    background-color: rgba(255, 0, 85, 0.205);
     text-align: center;
     border-radius: 6px;
     justify-content: center;
     align-items: center;
     display: flex;
+    border-style: solid;
+    border-color: rgba(0, 26, 255, 0.205);
+    
 }
 
 .add-reminder {
     grid-area: add-reminder;
     /*     grid-column: 5/8; */
-    background-color: rgba(0, 217, 255, 0.205);
     text-align: center;
     border-radius: 6px;
     justify-content: center;
     align-items: center;
     display: flex;
+    border-style: solid;
+    border-color: rgba(0, 26, 255, 0.205);
+    
 }
