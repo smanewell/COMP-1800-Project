@@ -117,3 +117,85 @@ o	Created the .png logo used for the page.
 Explanation:
 
 o	Wrote and organized the original project documentation booklet including current progress and future implementation.
+
+___________________________________________________________________________________________________
+
+**Name of Team Member**: Ralph Kilian, A01202431
+
+### Tasks Worked On
+
+**Task Name**:  Project files
+
+Explanation:
+
+	o	I used the figma prototypes to create html mock ups of a login page, a main page, a create page, a edit page and a single-reminder page. 
+
+	o	I managed to style these pages so that they are the same as the prototype images
+	o	Added some js to dynamically create list items for the subtasks
+
+	o	These list items can added, removed, edited, marked as complete and deleted
+
+**Task Name**:  Project Files – Take two
+
+Explanation:
+
+	o	I have attempted to integrate my project files from above with Armaan’s example reminderapp which he provided
+
+	o	I reverse engineered some of his features and then added some of my html and js to them from my original project files
+
+	o	Currently I have the all-reminders page kind of working
+
+	o	I also have the create new reminder page kind of working
+
+	o	The landing page is also set as my localhost/3000 page.
+
+**Task Name**:  
+
+Explanation:
+
+	o	I attempted to set up a database with Firebase
+
+	o	I also attempted to set up a database with MongoDB – I installed compass locally and got a project going, but struggled through some tutorials that assume you have prior knowledge, so really had a hard time figuring it out.
+
+	o	I feel with a little more instruction or a tutorial video specifically about databases, I may have succeeded, but my conceptual understanding of how it works is just not there.
+
+	o	I will continue to try.
+
+	o	In the meantime I am using the fake “cindy” database
+
+	o	I changed it from Armaan’s original reminderapp example to an object which contains a title, a datetime and subtasks
+
+**Task Name**:  Datetimepicker
+
+Explanation:
+
+	o	I used a combination of css, javascript and html to create a datetimepicker
+
+	o	This took me ages to accomplish and I am still struggling to fix some of the styling.
+
+	o	It works great though.
+
+	o	I am still to figure how to use the data to present the reminders in various ways:
+
+			Reminders in order chronological order
+
+			All reminders for one day
+
+			All reminders for a week 
+
+			All reminders for a month	
+
+**Task Name**:  Weather API
+
+Explanation:
+
+	o	I could not get an apikey for darksky, so chose to use openweathermap instead
+
+	o	I used geocoder and google api’s to get the users location from their ip address, and then query the weather api with that information, but couldn’t get it work
+
+	o	I think with more time I could make that happen though
+
+**Side Note** 
+I would like to add, that I have been having a good time trying to figure this out, and I will make my own working version of this this summer, as I have already spent an inordinate amount of time on it, it wouldn’t make sense to stop now. I have some cool design ideas for 
+**Side Note**
+___________________________________________________________________________________________________
