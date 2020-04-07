@@ -1,0 +1,29 @@
+.deleteForm {
+  display: inline-block
+}
+.header {
+  text-align: center;
+  color: white;
+  background-color: dodgerblue;
+  padding: 25px;
+  margin: auto;
+}
+
+.footer {
+  text-align: center;;
+  color: white;
+  background-color: dodgerblue;
+  padding: 25px;
+  margin: auto;
+}
+a {
+  color:white;
+  text-decoration: none;
+}
+.pull-right {
+  color: dodgerblue ;
+}
+
+.fa-eye {
+color: dodgerblue;
+}

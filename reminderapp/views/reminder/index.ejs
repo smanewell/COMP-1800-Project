@@ -1,0 +1,16 @@
+<div class="container">
+  <h1 class="page-header">Reminders</h1>
+
+  <ul class="list-group">
+    <% reminders.forEach(function (reminderItem) { %>
+    <li class="list-group-item">
+      <div style="display: flexbox;">
+        <span><strong><%= reminderItem.title %>: </strong></span>
+        <span><%= reminderItem.datetime %></span>
+        <a class="pull-right" href=<%= "/reminder/" + reminderItem.id %>>View</a>
+      </div>
+    </li>
+    <% }) %>
+  </ul>
+
+</div>
