@@ -1,0 +1,35 @@
+<div class="container">
+  <h1 class="page-header">Reminders</h1>
+
+  <ul class="list-group">
+    <% reminders.forEach(function (reminderItem) { %>
+    <li class="list-group-item full-list" >
+      <div style="display: flexbox;">
+        <span><strong><%= reminderItem.title %>: </strong></span>
+        <span><%= reminderItem.datetime %></span>
+        <a class="pull-right" href=<%= "/reminder/" + reminderItem.id %>>View</a>
+      </div>
+    </li>
+    <% }) %>
+  </ul>
+
+</div>
+<div class="footer">
+  <div style="display:flex; flex-direction:row; justify-content: space-around;">
+      <div style="display: flex; flex-direction:column;">
+          <h5>Create Reminder</h5>
+          <a href="/reminder/new" class="main-button">
+              <i class="fa fa-plus-circle fa-4x"></i>
+          </a>
+      </div>
+      <div style="display: flex; flex-direction:column;"> 
+          <h5>View All Reminders</h5>
+          <a href="/reminder" class="main-button">
+              <div class="fa-stack fa-2x">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-eye fa-stack-1x"></i>
+              </div>
+          </a>
+      </div>
+  </div>
+</div>
