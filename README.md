@@ -83,7 +83,7 @@
     app.listen(3000);
     ```
 
-14. create the form label/input for name, email, and *password* in `register.ejs` .Make sure that the attributes `for`,  `id`, and `name` all have the same value. Also, make sure to include a `required` attribute in every `input` tag
+14. create the form label/input for name, email, and password in `register.ejs` .Make sure that the attributes `for`,  `id`, and `name` all have the same value. Also, make sure to include a `required` attribute in every `input` tag
 
 15. repeat step 14 to create a `login.ejs` file, except refactor the code to match the requirements for **login**
 
@@ -174,7 +174,7 @@
 
 21. create an array to hold users for simplicity
 
-22. When our users enter a register and create a password, we want to make sure that we can hash it and compare it against other hashed passwords. We will download the `bcrypt` library and import/initialize it inside our `server.js` file.
+22. When our users register and create a password, we want to make sure that we can hash it and compare it against other hashed passwords. We will download the `bcrypt` library and import/initialize it inside our `server.js` file.
 
     
 
