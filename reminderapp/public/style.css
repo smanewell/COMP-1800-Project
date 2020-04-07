@@ -16,7 +16,7 @@
   padding: 25px;
   margin: auto;
 }
-a {
+.main-button{
   color:white;
   text-decoration: none;
 }
@@ -24,6 +24,74 @@ a {
   color: dodgerblue ;
 }
 
-.fa-eye {
+.fa-eye, .fa-pen{
 color: dodgerblue;
+}
+
+#myUL {
+  border: 1px solid lightgray; 
+  border-radius: 16px; 
+  min-height: 42px; 
+  font-size: large; 
+  color:dimgray;
+  padding: 10px;
+  list-style-type: none;
+  transition: 0.2s
+}
+
+#myUL li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+#myUL li:hover {
+  background: #ddd;
+}
+#myUL li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#myUL li.checked {
+  background-color: mediumaquamarine;
+  color: white;
+  text-decoration: line-through;
+}
+#myUL li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: white;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+.close {
+  position: absolute;
+  font-size: 25px;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+.close:hover {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.full-list .close {
+display: none
 }

@@ -1,5 +1,6 @@
 const express = require("express")
 const app = express()
+const $ = require('jquery')
 const ejsLayouts = require("express-ejs-layouts")
 const reminderController = require("./controllers/reminder_controller");
 
