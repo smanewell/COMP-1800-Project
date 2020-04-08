@@ -231,7 +231,7 @@
     
     ```
 
-24. Now, let's say we have added a user to our mock database (our local array) AND we want to be able to **persist the user across all of our requests. ** One way we can do this is by using a library called  **Passport.js**
+24. Now, let's say we have added a user to our mock database (our local array) AND we want to be able to **persist the user across all of our requests.** One way we can do this is by using a library called  **Passport.js**
 
 25. Install Passport.js
 
