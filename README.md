@@ -16,8 +16,6 @@
 2. go to `localhost:3000` in your browser
 
 
-## Detailed Explanation
-
 1. `npm init` 
 
 2. `npm i express ejs`
@@ -40,7 +38,7 @@
 
 9. create a folder named **views** and then create that `index.ejs` file inside of it.
 
-10. before we continue, we want to make sure that we tell our server that we are using `ejs` syntax. We do this by setting the view engine to `ejs` (which is a JavaScript-embedded html template). For example:
+10. before we continue, we want to make sure that we tell our server that we are using `ejs` syntax. We do this by setting the view engine to `ejs` (which is a javascript-embedded html template). For example:
 
     ```javascript
     const express = require('express');
@@ -136,7 +134,7 @@
 19. we want to include this line of code: 
 
     ```js
-    app.use(express.urlencoded({extended: false)})
+    app.use(express.urlencoded({extended: false}))
     ```
 
     This tells our application that we want to access the forms we created inside `register.ejs` and `login.ejs` by using our request variable: `req` inside our post methods.
@@ -183,10 +181,11 @@
     ​	
 
 23. ```js
-    const express = require('express')
-    const app = express()
+    const express = require('express');
+    const app = express();
+    const bcrypt = require('bcrypt');
     // 21. array to hold our users
-    const users = []
+    const users = [];
     
     app.set('view-engine', 'ejs');
     // 19. set extended as false 
@@ -197,14 +196,14 @@
     });
     
     app.get('/login', (req, res) => {
-      res.render('login.ejs')
+      res.render('login.ejs');
     });
     
     app.post('/login',(req,res) => {  
     });
     
     app.get('/register',(req, res) => {
-      res.render('register.ejs')
+      res.render('register.ejs');
     });
     
     app.post('/register', checkNotAuthenticated, async (req, res) => {
@@ -218,17 +217,148 @@
           name: req.body.name,
           email: req.body.email,
           password: hashedPassword
-        })
+        });
         // 
-        res.redirect('/login')
+        res.redirect('/login');
       } catch {
           /* 
         if register fails, redirect back to '/register' 	*/
-        res.redirect('/register')
+        res.redirect('/register');
       }
-    })
+    });
     
-    app.listen(3000)
+    app.listen(3000);
+    
     ```
 
-24. 
+24. Now, let's say we have added a user to our mock database (our local array) AND we want to be able to **persist the user across all of our requests. ** One way we can do this is by using a library called  **Passport.js**
+
+25. Install Passport.js
+
+    ```bash
+    npm i passport
+    ```
+
+26. install `passport-local ` which just allows us to use **local** usernames and passwords to login
+
+    ```bash
+    npm i passport-local
+    ```
+
+27. next, in order to store and persist our users information across all of our pages we need to install `session` for express
+
+    ```bash
+    npm i express-session
+    ```
+
+28. finally, if we want to display error messages to our users if their login attempt fails we can download `flash` for express. 
+
+    ```bash
+    npm i express-flash
+    ```
+
+29. now, it's time to set up passport with our login. We can start writing our code for this inside our `server.js` file or we could make a new file to make things more organized. 
+
+    In this example, we will create a new file called `passport-config.js` to store all of our passport code. This file is stored in our main folder alongside `server.js`, `package.json`, etc.
+
+    
+
+30. inside this file, create a function called `initialize` and require it inside our `server.js` file
+
+    #### **`passport-config.js`**
+
+    ```js
+    function initialize(passport){
+    }
+    ```
+
+    **`server.js`**
+
+    ```js
+    const express = require('express');
+    const app = express();
+    const bcrypt = require('bcrypt');
+    // import
+    const passport = require('passport')
+    
+    // link to passport-config.js
+    const initializePassport = require('./passport-config');
+    initializePassport(passport)
+    
+    const users = [];
+    
+    app.set('view-engine', 'ejs');
+    app.use(express.urlencoded({ extended: false }));
+    
+    app.get('/',(req, res) => {
+      res.render('index.ejs');
+    });
+    
+    app.get('/login', (req, res) => {
+      res.render('login.ejs');
+    });
+    
+    app.post('/login',(req,res) => {  
+    });
+    
+    app.get('/register',(req, res) => {
+      res.render('register.ejs');
+    });
+    
+    app.post('/register', checkNotAuthenticated, async (req, res) => {
+      try {
+    
+        const hashedPassword = await bcrypt.hash(req.body.password, 10)
+        
+        users.push({
+          id: Date.now().toString(),
+          name: req.body.name,
+          email: req.body.email,
+          password: hashedPassword
+        });
+        res.redirect('/login');
+      } catch {
+    
+        res.redirect('/register');
+      }
+    });
+    
+    app.listen(3000);
+    ```
+
+31. we're using  the `local` version of passport in this example
+
+    **`passport-config.js`**
+
+    ```js
+    const LocalStrategy = require('passport-local').Strategy
+    
+    function initialize(passport, getUserByEmail, getUserById) {
+      const authenticateUser = async (email, password, done) => {
+        const user = getUserByEmail(email)
+        if (user == null) {
+          return done(null, false, { message: 'No user with that email' })
+        }
+    
+        try {
+          if (await bcrypt.compare(password, user.password)) {
+            return done(null, user)
+          } else {
+            return done(null, false, { message: 'Password incorrect' })
+          }
+        } catch (e) {
+          return done(e)
+        }
+      }
+    
+      passport.use(new LocalStrategy({ usernameField: 'email' }, authenticateUser))
+      passport.serializeUser((user, done) => done(null, user.id))
+      passport.deserializeUser((id, done) => {
+        return done(null, getUserById(id))
+      })
+    }
+    
+    module.exports = initialize
+    ```
+
+    
