@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <div class="header">
+            <div>
+                <h1>iForgot</h1>
+                <p style="margin: 5px; padding: 5px;">We Remember</p>
+            </div>
+            <!-- search -->
+            <div style="text-align: center; align-items: center;">
+                <div>
+                    <input type="text" placeholder="Search" name="search"
+                        style="border-radius:6px; padding:5px; width: 60%; max-width: 350px;">
+
+                    <button type="button" class="btn btn-circle btn-sm" style="background-color:mediumaquamarine;"><i
+                            class="fa fa-search fa-2x" style="color: white;"></i>
+                </div>
+            </div>
+        </div>
+        <!-- todays reminders -->
+        <div>
+            <form action="/reminder" method="POST" id="new reminder">
+                <div class="form-group" id="date">
+                    <h4 class="reminder-heading">Date & Time</h4>
+       
+                        <div class="form-group" style="width:250px;">
+                            <div class='input-group date' id='datetimepicker1' aria-placeholder="mm/dd/yy hh:mm ">
+                                <input type='text' class="form-control" >
+                                <span class="input-group-addon" style="font-size: 11px;">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                </span>
+                            </div>
+                        </div>
+                    <div class="form-group">
+                        <h4 class="reminder-heading">New Reminder</h4>
+                        <input type="text" class="form-control" placeholder="New Reminder" name="reminder" style="margin-top: 25px;margin-bottom: 25px;font-size: large;padding: 20px;border-radius: 15px;">
+                    </div>
+                    <div class="form-group">
+                        <h4 class="reminder-heading">Tasks</h4>
+                        <ul id="myUL">
+                            <div>
+                                <span onclick="newElement()" class="btn btn-default" style="border: none;"><i
+                                        class="fa fa-plus fa-1x" style="color: slategray;"></i></span>
+                                <input type="text" id="myInput" placeholder="new subtask"
+                                    style="border:none;  border-radius: 10px; width: 80%;">
+                            </div>
+                        </ul>
+                    </div>
+            </form>
+        </div>
+
+        <!-- creat / view -->
+        <div class="create-view" style="background-color: dodgerblue; ;">
+            <!-- create reminder -->
+            <div style="display: block;width: 50%; font-size: small;">
+                <button type="submit" for="new reminder" class="btn"
+                    style="color: none; background-color: dodgerblue; border: none;">
+                    <i class="fa fa-check-circle fa-4x" style="color: white;"></i>
+                </button>
+            </div>
+            <!-- view all reminders -->
+            <div style="display: block; width: 50%; font-size: small;">
+                <button type="submit" for="new reminder" class="btn"
+                    style="color: none; background-color: dodgerblue; border: none;">
+                    <div class="fa-stack fa-2x">
+                        <i class="fa fa-circle fa-stack-2x" style="color: white;"></i>
+                        <i class="fas fa-home fa-stack-1x" style="color: dodgerblue; font-size: larger;"></i>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        $(function () {
+            $('#datetimepicker1').datetimepicker({
+        defaultDate: new Date(),
+        format: "MM/DD/YYYY - HH:mm",
+
+    });
+        });
+    </script>
+
+
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>
