@@ -24,7 +24,7 @@
   color: dodgerblue ;
 }
 
-.fa-eye, .fa-pen{
+.fa-eye, .fa-pen, .fa-home{
 color: dodgerblue;
 }
 
@@ -62,7 +62,7 @@ color: dodgerblue;
   user-select: none;
 }
 
-#myUL li.checked {
+/* #myUL li.checked {
   background-color: mediumaquamarine;
   color: white;
   text-decoration: line-through;
@@ -78,7 +78,7 @@ color: dodgerblue;
   transform: rotate(45deg);
   height: 15px;
   width: 7px;
-}
+} */
 
 .close {
   position: absolute;
@@ -94,4 +94,49 @@ color: dodgerblue;
 
 .full-list .close {
 display: none
+}
+
+.nav-item .close {
+
+  display: none;
+}
+
+.single-reminder .close {
+  display: none;
+}
+
+.task-item .close {
+  display: none;
+} 
+
+
+.today {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 5px auto;
+}
+
+.today-reminders {
+  margin: 5px;
+  padding: 5px;
+  background-color: dodgerblue;
+  border-radius: 15px;
+  color: white;
+}
+
+.today-reminders-info {
+  display: flex;
+  align-items: center;
+}
+
+.next-reminder {
+  width: 70%;
+}
+
+.next-reminder-info {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: lightskyblue;
 }

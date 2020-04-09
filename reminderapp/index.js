@@ -3,7 +3,8 @@ const app = express()
 const $ = require('jquery')
 const ejsLayouts = require("express-ejs-layouts")
 const reminderController = require("./controllers/reminder_controller");
-
+const favicon = require('serve-favicon')
+const flatpickr = require('flatpickr')
 
 // Servera
   // Simple Server
@@ -12,7 +13,7 @@ app.use(express.static(__dirname + "/public"))
 app.use(ejsLayouts)
 app.set("view engine", "ejs")
 
-
+app.use(favicon(__dirname + '/public/favicon/favicon.ico'));
 
 app.use(express.urlencoded({ extended: false }))
 
@@ -22,6 +23,8 @@ app.use(express.urlencoded({ extended: false }))
 
 
 app.get("/reminder", reminderController.list)
+
+app.get("/reminder/home", reminderController.home)
 
 app.get("/reminder/new", reminderController.new)
 

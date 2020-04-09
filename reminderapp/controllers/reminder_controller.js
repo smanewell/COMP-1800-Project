@@ -9,6 +9,10 @@ let remindersController = {
     res.render('reminder/create')
   },
 
+  home: (req, res) => {
+    res.render('reminder/home')
+  },
+
   listOne: (req, res) => {
     let reminderToFind = req.params.id;
     let searchResult = Database.cindy.reminders.find(function (reminder) {
@@ -28,7 +32,7 @@ let remindersController = {
       datetime: req.body.datetime
     }
     let my_tasks = req.body.task
-    if (typeof(my_tasks) == typeof([])) {
+    if (typeof (my_tasks) == typeof ([])) {
       reminder.tasks = my_tasks
     }
     else {
@@ -51,11 +55,17 @@ let remindersController = {
     let reminderToFind = req.params.id;
     let searchResult = Database.cindy.reminders.find(function (reminder) {
       if (reminder.id == reminderToFind) {
-        reminder.title = req.body.title,
-          reminder.datetime = req.body.datetime,
-          reminder.tasks = req.body.tasks
-
+        reminder.title = req.body.title
+          reminder.datetime = req.body.datetime
+          let my_tasks = req.body.task
+          if (typeof (my_tasks) == typeof ([])) {
+            reminder.tasks = my_tasks
+          }
+          else {
+            reminder.tasks = [my_tasks]
+          }
       }
+
     });
     res.redirect('/reminder/' + reminderToFind)
   },
