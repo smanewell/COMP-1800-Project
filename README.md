@@ -367,11 +367,12 @@
     const LocalStrategy = require('passport-local').Strategy
     
     function initialize(passport){
-        /* `done` represents a function that will be 			called when we are done authenticating our 			user
+        /* `done` represents a function that will be 
+        called when we are done authenticating our user
         */
-        const authenticateUser = async (email, password, 	 done) => {}
+        const authenticateUser = async (email, password, done) => {}
         
-        passport.use(new LocalStrategy({usernameField: 		'email'}),authenticateUser);
+        passport.use(new LocalStrategy({usernameField: 'email'}),authenticateUser);
     
     }
     ```
@@ -382,9 +383,9 @@
     const LocalStrategy = require('passport-local').Strategy
     
     function initialize(passport){
-        const authenticateUser = async (email, password, 	 done) => { }
+        const authenticateUser = async (email, password, done) => { }
         
-        passport.use(new LocalStrategy({usernameField: 		'email'}),authenticateUser);
+        passport.use(new LocalStrategy({usernameField: 'email'}),authenticateUser);
         
         passport.serializeUser((user,done) => { });
         passport.deserializeUser((id,done) => { });
