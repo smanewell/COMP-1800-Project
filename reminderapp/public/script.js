@@ -82,7 +82,7 @@ function getCoordinates(position) {
 
 // displayDailyForecast fetches weather data from DarkSky for the current day and displays it as text at the element with input ID.
 async function displayDailyForecast(displayID) {
-  getForecast();
+  getLocation();
   let currentDate = new Date();
   let currentTime = currentDate.getTime();
   apiURL = "https://api.darksky.net/forecast/c091c8ff8c07a5b4ffebf5621ce1310d/" + String(latitude) + ',' + String(longitude) + ',' + String(currentTime);
