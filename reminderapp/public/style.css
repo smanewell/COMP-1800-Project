@@ -109,7 +109,7 @@ display: none
   display: none;
 } 
 
-
+/* for the todays reminders block on main page */
 .today {
   display: flex;
   align-items: center;
@@ -135,6 +135,57 @@ display: none
 }
 
 .next-reminder-info {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: lightskyblue;
+}
+
+/* for the weather block in the home page */
+.forecast {
+  text-align: center;
+  background-color: lightskyblue;
+  padding: 5px;
+  margin: auto;
+  margin-top: none;
+}
+
+.forecast h5 {
+  color: white;
+}
+.weather {
+  display: inline-flex;
+}
+
+.weather-icon {
+  font-size: 12px;
+  color: gray;
+}
+
+.weather-icon:hover {
+  cursor: pointer;
+}
+
+.weekday {
+  color: white;
+}
+
+/* for the future reminder block in the home page */
+.future-reminders {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 5px auto;
+}
+
+.week-reminders {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: lightskyblue;
+}
+
+.month-reminders {
   margin: 5px;
   padding: 5px;
   border-radius: 15px;

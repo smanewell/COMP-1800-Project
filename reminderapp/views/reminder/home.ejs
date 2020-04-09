@@ -1,43 +1,119 @@
-<div class="container">
-    <div class="today">
-        <div style="width: 70%; margin: 5px; ">
-            <!-- today reminders -->
-            <div class="today-reminders">
-                <h5>Today</h5>
-                <div class="today-reminders-info">
-                    <!-- Next reminder for today -->
-                    <div class="next-reminder">
-                        <h6>Next reminder</h6>
-                        <div>
-                            <div class="next-reminder-info">
-                                <p>Today, time</p>
-                                <p>Reminder Title</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- number of reminders for today -->
-                    <div style="width: 30%; font-size: larger; color:black">
-                        <div class="fa-stack fa-2x">
-                            <i class="fa fa-circle fa-stack-2x fa-white" style="color: white;"></i>
-                            <span class="fa-stack-1x">
+<div class="forecast">
+    <h5>Forecast</h5>
+    <div class="weather">
+        <div class="weather-icon">
+            <div class="fa-stack fa-2x" onclick="getForecast()">
+                <i class="fa fa-circle fa-stack-2x " style="color: white;"></i>
+                <i class="fa fa-cloud fa-stack-1x"></i>
+            </div>
+            <div class="weekday">Day 1</div>
+        </div>
+        <div class="weather-icon">
+            <div class="fa-stack fa-2x">
+                <i class="fa fa-circle fa-stack-2x " style="color: white;"></i>
+                <i class="fa fa-wind fa-stack-1x"></i>
+            </div>
+            <div class="weekday">Day 2</div>
+        </div>
+        <div class="weather-icon">
+            <div class="fa-stack fa-2x">
+                <i class="fa fa-circle fa-stack-2x " style="color: white;"></i>
+                <i class="fa fa-cloud-rain fa-stack-1x"></i>
+            </div>
+            <div class="weekday">Day 3</div>
+        </div>
+        <div class="weather-icon">
+            <div class="fa-stack fa-2x">
+                <i class="fa fa-circle fa-stack-2x " style="color: white;"></i>
+                <i class="fa fa-cloud-showers-heavy fa-stack-1x"></i>
+            </div>
+            <div class="weekday">Day 4</div>
+        </div>
+        <div class="weather-icon">
+            <div class="fa-stack fa-2x">
+                <i class="fa fa-circle fa-stack-2x " style="color: white;"></i>
+                <i class="fa fa-cloud-sun fa-stack-1x"></i>
+            </div>
+            <div class="weekday">Day 5</div>
+        </div>
+        <div class="weather-icon">
+            <div class="fa-stack fa-2x">
+                <i class="fa fa-circle fa-stack-2x " style="color: white;"></i>
+                <i class="fa fa-snowflake fa-stack-1x"></i>
+            </div>
+            <div class="weekday">Day 6</div>
+        </div>
+        <div class="weather-icon">
+            <div class="fa-stack fa-2x">
+                <i class="fa fa-circle fa-stack-2x " style="color: white;"></i>
+                <i class="fa fa-sun fa-stack-1x"></i>
+            </div>
+            <div class="weekday">Day 7</div>
+        </div>
 
-                            </span>
+    </div>
+</div>
+<div class="today">
+    <div style="width: 70%; margin: 5px; ">
+        <!-- today reminders -->
+        <div class="today-reminders">
+            <h5>Today</h5>
+            <div class="today-reminders-info">
+                <!-- Next reminder for today -->
+                <div class="next-reminder">
+                    <h6>Next reminder</h6>
+                    <div>
+                        <div class="next-reminder-info">
+                            <p>Today, time</p>
+                            <p>Reminder Title</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- today umbrella -->
-        <div style=" width: 30%; margin: 5px;font-size: x-large;">
-            <div>
-                <div class="fa-stack fa-2x">
-                    <i class="fa fa-circle fa-stack-2x " style="color: dodgerblue;"></i>
-                    <i class="fa fa-umbrella fa-stack-1x" style="color: white;"></i>
+                <!-- number of reminders for today -->
+                <div style="width: 30%; font-size: larger; color:black">
+                    <div class="fa-stack fa-2x">
+                        <i class="fa fa-circle fa-stack-2x fa-white" style="color: white;"></i>
+                        <span class="fa-stack-1x">
+
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- today umbrella -->
+    <div style=" width: 30%; margin: 5px;font-size: x-large;">
+        <div>
+            <div class="fa-stack fa-2x">
+                <i class="fa fa-circle fa-stack-2x " style="color: dodgerblue;"></i>
+                <i class="fa fa-umbrella fa-stack-1x" style="color: white;"></i>
+            </div>
+        </div>
+    </div>
 </div>
+<div class="future-reminders">
+    <!-- this week reminders -->
+    <div style="width: 50%; margin: 5px;">
+        <div class="week-reminders" style="font-size: larger; color:black; display: block;">
+            <h5 style="color: white;">This Week</h5>
+            <div class="fa-stack fa-2x">
+                <i class="fa fa-circle fa-stack-2x" style="color: white;"></i>
+                <span class="fa-stack-1x">2</span>
+            </div>
+        </div>
+    </div>
+    <!-- this month reminders -->
+    <div style="width: 50%; margin: 5px;">
+        <div class="week-reminders" style="font-size: larger; color:black; display: block;">
+            <h5 style="color: white;">This Month</h5>
+            <div class="fa-stack fa-2x">
+                <i class="fa fa-circle fa-stack-2x" style="color: white;"></i>
+                <span class="fa-stack-1x">2</span>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="footer">
     <div style="display:flex; flex-direction:row; justify-content: space-around;">
         <div style="display: flex; flex-direction:column;">

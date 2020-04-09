@@ -1,4 +1,4 @@
-  
+
 
 // Basic API Call URL:
 // https://api.darksky.net/forecast/c091c8ff8c07a5b4ffebf5621ce1310d/latitude,longitude
@@ -96,3 +96,6 @@ function displayWeeklyForecast(displayID) {
   // partly-cloudy-night
 
 }
+getLocation()
+displayDailyForecast(displayID = "today")
+displayWeeklyForecast()
