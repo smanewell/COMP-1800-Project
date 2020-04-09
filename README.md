@@ -326,39 +326,70 @@
     app.listen(3000);
     ```
 
-31. we're using  the `local` version of passport in this example
+31. We're using  the `local` version of passport in this example
 
-    **`passport-config.js`**
+   **`passport-config.js`**
 
-    ```js
-    const LocalStrategy = require('passport-local').Strategy
-    
-    function initialize(passport, getUserByEmail, getUserById) {
-      const authenticateUser = async (email, password, done) => {
-        const user = getUserByEmail(email)
-        if (user == null) {
-          return done(null, false, { message: 'No user with that email' })
-        }
-    
-        try {
-          if (await bcrypt.compare(password, user.password)) {
-            return done(null, user)
-          } else {
-            return done(null, false, { message: 'Password incorrect' })
-          }
-        } catch (e) {
-          return done(e)
-        }
-      }
-    
-      passport.use(new LocalStrategy({ usernameField: 'email' }, authenticateUser))
-      passport.serializeUser((user, done) => done(null, user.id))
-      passport.deserializeUser((id, done) => {
-        return done(null, getUserById(id))
-      })
-    }
-    
-    module.exports = initialize
-    ```
+   ```js
+   const LocalStrategy = require('passport-local').Strategy
+   
+   function initialize(passport){
+       
+   }
+   ```
 
-    
+32. Now we want to **Use** this local strategy:
+
+   ```js
+   const LocalStrategy = require('passport-local').Strategy
+   
+   function initialize(passport){
+       passport.use(new LocalStrategy());
+   }
+   ```
+
+33. We need to pass options into the `new LocalStrategy()` instance in order to get info from our `.ejs` files. The info is the input tags that have the `name `attributes with the values `email` and `password` . We pass in the option `usernameField` to identify our `email` input, since the input's name attribute is equal to `email`. We can pass in the option `passwordField` to identify our `password` input, but since it's value is equal to `password` it already shares the same name as the default value that `passwordField` checks for. So we can leave out this option.
+
+   ```js
+   const LocalStrategy = require('passport-local').Strategy
+   
+   function initialize(passport){
+       passport.use(new LocalStrategy({usernameField: 'email'}));
+   }
+   ```
+
+   
+
+34. Next, we need to pass a second variable into our `LocalStrategy` instance which is going to be the function that this is going to authenticate our user. We'll name it `authenticateUser`
+
+   ```js
+   const LocalStrategy = require('passport-local').Strategy
+   
+   function initialize(passport){
+       /* `done` represents a function that will be 
+       called when we are done authenticating our user
+       */
+       const authenticateUser = async (email, password, done) => {}
+       
+       passport.use(new LocalStrategy({usernameField: 'email'}),authenticateUser);
+   
+   }
+   ```
+
+35. The next thing we need to do is set up passport to serialize and deserialize our users. Inside of the `serializeUser` call we are going to have parameters:  `user` and the `done` function, which will serialize our user to store inside it in the session. For our call to `deserializeUser`  we take in:  `id` and `done` because we're going to serialize our user as a single `id`.
+
+   ```js
+   const LocalStrategy = require('passport-local').Strategy
+   
+   function initialize(passport){
+       const authenticateUser = async (email, password, done) => { }
+       
+       passport.use(new LocalStrategy({usernameField: 'email'}),authenticateUser);
+       
+       passport.serializeUser((user,done) => { });
+       passport.deserializeUser((id,done) => { });
+   
+   }
+   ```
+
+36. 
