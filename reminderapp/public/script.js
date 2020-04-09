@@ -98,7 +98,7 @@ async function displayDailyForecast(displayID) {
 
 // createWeeklyForecast iterates from the current day through the week and constructs an array resprenting the weather forcast.
 async function createWeeklyForecast() {
-  getForecast();
+  getLocation();
   let weeklyForecast = []
   
   for (let day = 0; day < 7; day++) {
