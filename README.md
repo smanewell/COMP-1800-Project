@@ -15,6 +15,7 @@
 1. `npm run devStart`
 2. Go to `localhost:3000` in your browser
 
+## Detailed Explanation
 
 1. `npm init` 
 
