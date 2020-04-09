@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: false }))
 
 app.get("/reminder", reminderController.list)
 
-app.get("/reminder/home", reminderController.home)
+app.get("/home", reminderController.home)
 
 app.get("/reminder/new", reminderController.new)
 
@@ -38,6 +38,6 @@ app.post("/reminder/update/:id", reminderController.update) // suggestion for cl
 
 app.post("/reminder/delete/:id", reminderController.delete)
 
-app.listen(3000, function(){
+app.listen(3001, function(){
   console.log("Server running. Visit: localhost:3000/reminder in your browser 🚀");
 })
