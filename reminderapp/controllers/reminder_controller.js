@@ -13,6 +13,7 @@ let remindersController = {
     res.render('reminder/home')
   },
 
+
   listOne: (req, res) => {
     let reminderToFind = req.params.id;
     let searchResult = Database.cindy.reminders.find(function (reminder) {

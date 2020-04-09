@@ -26,6 +26,7 @@ app.get("/reminder", reminderController.list)
 
 app.get("/home", reminderController.home)
 
+
 app.get("/reminder/new", reminderController.new)
 
 app.get("/reminder/:id", reminderController.listOne)
