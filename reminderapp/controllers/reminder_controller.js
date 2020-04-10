@@ -13,6 +13,10 @@ let remindersController = {
     res.render('reminder/home')
   },
 
+  login: (req, res) => {
+    res.render('reminder/login')
+  },
+
 
   listOne: (req, res) => {
     let reminderToFind = req.params.id;

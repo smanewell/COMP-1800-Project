@@ -1,6 +1,9 @@
 .deleteForm {
   display: inline-block
 }
+
+
+/*  header styling */
 .header {
   text-align: center;
   color: white;
@@ -24,6 +27,7 @@
   color: dodgerblue ;
 }
 
+/*  navigation icons in footers */
 .fa-eye, .fa-pen, .fa-home{
 color: dodgerblue;
 }
@@ -80,6 +84,8 @@ color: dodgerblue;
   width: 7px;
 } */
 
+
+/* close button limitation */
 .close {
   position: absolute;
   font-size: 25px;
@@ -190,4 +196,30 @@ display: none
   padding: 5px;
   border-radius: 15px;
   background-color: lightskyblue;
+}
+
+
+/*  login page */
+.signin {
+
+  background-color: dodgerblue;
+
+  color: white;
+}
+
+.sign {
+  font-size: larger;
+
+
+}
+
+.signbtn {
+  color: mediumaquamarine;
+  
+
+
+}
+
+.signin-a {
+  color: mediumaquamarine;
 }
