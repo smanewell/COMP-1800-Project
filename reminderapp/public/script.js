@@ -31,6 +31,8 @@ function remove(el) {
 }
 
 
+
+
 // // Add a "checked" symbol when clicking on a list item
 // let list = document.querySelector('ul');
 // list.addEventListener('click', function (ev) {

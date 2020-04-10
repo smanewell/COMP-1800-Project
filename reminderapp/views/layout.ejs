@@ -9,6 +9,7 @@
   <script src="https://kit.fontawesome.com/79876a6821.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
   <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_green.css">  
 
   <link rel="stylesheet" href="/style.css">
@@ -24,10 +25,14 @@
 
 
   <script>
+    
+
+
     const fp = flatpickr(".flatpickr", {
       enableTime: true,
       dateFormat: "Y-m-d H:i",
-      wrap: true
+      wrap: true,
+      time_24hr: true
       // plugins: [new confirmDatePlugin({
       //   confirmIcon: "<i class='fa fa-check'></i>",
       //   confirmText: "OK ",
