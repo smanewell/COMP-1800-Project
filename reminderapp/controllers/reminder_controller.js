@@ -10,7 +10,7 @@ let remindersController = {
   },
 
   home: (req, res) => {
-    res.render('reminder/home')
+    res.render('reminder/home', { reminders: Database.cindy.reminders})
   },
 
   login: (req, res) => {
