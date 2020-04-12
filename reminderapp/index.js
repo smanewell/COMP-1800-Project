@@ -5,7 +5,9 @@ const ejsLayouts = require("express-ejs-layouts")
 const reminderController = require("./controllers/reminder_controller");
 const favicon = require('serve-favicon')
 const flatpickr = require('flatpickr')
-
+const fetch = require('node-fetch')
+const moment = require('moment');
+moment().format();
 
 app.use(express.static(__dirname + "/public"))
 
@@ -40,6 +42,6 @@ app.post("/reminder/update/:id", reminderController.update) // suggestion for cl
 
 app.post("/reminder/delete/:id", reminderController.delete)
 
-app.listen(3000, function(){
-  console.log("Server running. Visit: localhost:3000/reminder in your browser 🚀");
+app.listen(3001, function(){
+  console.log("Server running. Visit: localhost:3001/reminder in your browser 🚀");
 })
