@@ -34,8 +34,3 @@ function newElement() {
 
 
 
-// // Dark Sky Forecaster Integration
-// // Basic API Call URL:
-// // https://api.darksky.net/forecast/c091c8ff8c07a5b4ffebf5621ce1310d/latitude,longitude
-
-// 
