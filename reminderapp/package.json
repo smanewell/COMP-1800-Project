@@ -24,7 +24,7 @@
     "favicon": "0.0.2",
     "firebase-admin": "^8.10.0",
     "flatpickr": "^4.6.3",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "method-override": "^2.3.7",
     "moment": "^2.24.0",
     "mongo": "^0.1.0",
